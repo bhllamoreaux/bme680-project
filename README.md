@@ -5,7 +5,7 @@ This is a home project written by me as a way to get the data from my bme680 sen
 
 This is pretty simple, since I anticipate I'll be the only one to actually use it. It's a one page/activity app, with 4 panels that display the temperature, pressure, VOC gas resistance and humidity. Below is a graph implemented using the MP Android Chart library. The default graph is for temperature, but it can be toggled to any of the other values by clicking on that panel.The graph can be scrubbed left to right to display the value and the date of that particular data point. 
 
-![Example of the App Interface](Screenshot_20200101-212359.jpg)
+![Example of the App Interface](Screenshot_20200101-212359.jpg | width=100)
 
 # Raspberry PI
 
