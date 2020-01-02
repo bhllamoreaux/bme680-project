@@ -24,7 +24,7 @@ public class PubNubRecursiveHistoryFetcher {
         // NOTICE: for demo/demo pub/sub keys Storage & Playback is disabled,
         // so use your pub/sub keys instead
         PNConfiguration pnConfiguration = new PNConfiguration();
-        pnConfiguration.setSubscribeKey("sub-c-5266c7c4-8bb2-11e9-934c-e65111950ecf");
+        pnConfiguration.setSubscribeKey("sub-c-");
         pubnub = new PubNub(pnConfiguration);
     }
 
