@@ -11,8 +11,8 @@ from helper_funcs import *
  
 #set the publish and subscribe keys needed to authenticate the pubnub channel
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = "sub-c-5266c7c4-8bb2-11e9-934c-e65111950ecf"
-pnconfig.publish_key = "pub-c-e3f89931-6469-4b33-9a49-61824c5b15c8"
+pnconfig.subscribe_key = "sub-c-"
+pnconfig.publish_key = "pub-c-"
 pnconfig.ssl = True
 pubnub = PubNub(pnconfig)
 
