@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EBE5E5"
+    android:backgroundTint="#E8F0E3E3"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/gas_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:divider="@color/spark_line_color"
+        android:elevation="10dp"
+        android:gravity="center_horizontal|fill_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/humid_layout"
+        app:layout_constraintTop_toBottomOf="@id/humid_layout">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="VOC Level"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="VOC Level" />
+
+        <TextView
+            android:id="@+id/bme_gas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/gas_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/gas_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/gas_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Mon Jan 1 00:00:00 XXX XXXX"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pressure_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FDFFFFFF"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/temp_layout"
+        app:layout_constraintTop_toBottomOf="@id/temp_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Pressure"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="Pressure" />
+
+        <TextView
+            android:id="@+id/bme_press"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/press_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/press_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/press_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Mon Jan 1 00:00:00 XXX XXXX"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/humid_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:divider="@color/spark_line_color"
+        android:elevation="10dp"
+        android:gravity="center_horizontal|fill_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Humidity"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="Humidity" />
+
+        <TextView
+            android:id="@+id/bme_humid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/humid_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/humid_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/humid_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Mon Jan 1 00:00:00 XXX XXXX"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/temp_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FDFFFFFF"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="25sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Temperature"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="Temperature" />
+
+        <TextView
+            android:id="@+id/bme_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/temp_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/temp_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Waiting for data..." />
+
+        <TextView
+            android:id="@+id/temp_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Mon Jan 1 00:00:00 XXX XXXX"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/y_value" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+    <TextView
+        android:id="@+id/y_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:text="0"
+        app:layout_constraintLeft_toRightOf="@id/textView4"
+        app:layout_constraintTop_toBottomOf="@id/pressure_layout" />
+
+    <TextView
+        android:id="@+id/x_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:text="Null"
+        app:layout_constraintLeft_toRightOf="@id/textView5"
+        app:layout_constraintTop_toBottomOf="@id/pressure_layout" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:text="Value: "
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pressure_layout" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:text="Date: "
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/y_value"
+        app:layout_constraintTop_toBottomOf="@id/pressure_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
