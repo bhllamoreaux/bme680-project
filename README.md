@@ -9,7 +9,7 @@ This is pretty simple, since I anticipate I'll be the only one to actually use i
 
 # Raspberry PI
 
-Two files are used, communicado.py and helper_funcs.py. Assuming that the sensor is wired in the I2C configuration, all you need to do is run python communicado.py to start pulling data from the sensor and sending it to the Android app.
+Two files are used, communicado.py and helper_funcs.py. Assuming that the sensor is wired in the I2C configuration and the files are in the same folder, all you need to do is run ```python communicado.py``` to start pulling data from the sensor and sending it to the Android app.
 
 ![Wiring Diagram for I2C. Credit: Adafruit](https://cdn-learn.adafruit.com/assets/assets/000/059/074/medium640/temperature___humidity_raspi_bme680_i2c_bb.jpg?1534112411)
 
