@@ -1,5 +1,5 @@
 # bme680-project
-This is a home project written by me as a way to get the data from my bme680 sensor from my Raspberry Pi to my Android phone. 
+This is a home project written by me as a way to get the data from my bme680 sensor from my Raspberry Pi to my Android phone. The messaging between the Pi and the app is done through PubNub, which means that if you want to reproduce this project on your own hardware, you'll have to get a new set of free PubNub API keys.
 
 # Communicado App
 
