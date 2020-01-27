@@ -1,3 +1,4 @@
+
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
 from pubnub.pnconfiguration import PNConfiguration
@@ -47,9 +48,3 @@ while True:
 
      	#sleep for 10 minutes before taking another reading
      	time.sleep(600)
-
-
-
-
-
-
