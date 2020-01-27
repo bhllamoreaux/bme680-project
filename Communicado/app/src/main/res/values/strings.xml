@@ -2,4 +2,5 @@
     <string name="app_name">Communicado</string>
     <string name="title_activity_graph">Graph</string>
     <string name="refresh">refresh</string>
+    <string name="title_label">Toggle Lights</string>
 </resources>

@@ -7,7 +7,6 @@ import RPi.GPIO as GPIO
 import time
 import bme680
 
- 
 def publish_callback(envelope, status):
     # Check whether request successfully completed or not
     if not status.is_error():
@@ -16,6 +15,8 @@ def publish_callback(envelope, status):
         print("error sending message")
  
 class MySubscribeCallback(SubscribeCallback):
+    on = False
+
     def presence(self, pubnub, presence):
         pass  # handle incoming presence data
  
@@ -36,9 +37,20 @@ class MySubscribeCallback(SubscribeCallback):
             pass
             # Handle message decryption error. Probably client configured to
             # encrypt messages and on live data feed it received plain text.
- 
+    
     def message(self, pubnub, message):
-        pass # Handle new message stored in message.message
+	#toggles the relay, to turn the lights on and off
+        if message.message == 'button pressed':
+            if self.on:
+                self.on = False
+            else:
+                self.on = True
+
+        if self.on:
+            GPIO.output(11,GPIO.HIGH)
+        else:
+            GPIO.output(11,GPIO.LOW)
+
  
  #sends a message over the channel, chains the qualifier and payload together
  #qualifier is used to distinguish which information stream it is, so it can be parsed on 
@@ -111,3 +123,10 @@ def init_bme680():
 	sensor.select_gas_heater_profile(0)
 
 	return sensor
+
+#initializes the relay and sets it to low to begin
+def init_relay():
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(11,GPIO.OUT)
+    GPIO.output(11,GPIO.LOW)

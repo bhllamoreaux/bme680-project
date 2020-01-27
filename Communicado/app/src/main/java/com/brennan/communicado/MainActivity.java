@@ -96,6 +96,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.light:
+                //send the message to toggle the light
+                pubnub.publish()
+                        .message("button pressed")
+                        .channel("communicado")
+                        .async(new PNCallback<PNPublishResult>() {
+                            @Override
+                            public void onResponse(PNPublishResult result, PNStatus status) {
+                                //handle errors
+                            }
+                        });
+                return true;
+                
+
             case R.id.refresh:
                 //refresh the data
                 getHistory();
@@ -173,8 +187,8 @@ public class MainActivity extends AppCompatActivity {
     public PubNub initPubnub(PNConfiguration pnConfiguration) {
 
         //set the subscribe/publish keys
-        pnConfiguration.setSubscribeKey("sub-c-5266c7c4-8bb2-11e9-934c-e65111950ecf");
-        pnConfiguration.setPublishKey("pub-c-e3f89931-6469-4b33-9a49-61824c5b15c8");
+        pnConfiguration.setSubscribeKey("");
+        pnConfiguration.setPublishKey("");
         pnConfiguration.setSecure(true);
 
         PubNub pubnub = new PubNub(pnConfiguration);
