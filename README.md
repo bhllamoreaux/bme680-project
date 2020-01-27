@@ -7,7 +7,9 @@ This is pretty simple, since I anticipate I'll be the only one to actually use i
 
 There are two buttons on the top. One refreshes the information, and the other one toggles the lights. The app will also add a button to the quick settings page on your phone that is able to toggle the lights, without you even having to open the app yourself.
 
-<img src="Screenshot_20200101-212359.jpg" width="200">
+<img src="Screenshot_20200126-204158.jpg" width="200">
+<img src="Screenshot_20200126-211614.jpg" width="200">
+
 
 # Raspberry PI
 
